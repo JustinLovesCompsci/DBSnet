@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Please log into the professional network database for members of Duke Business Society at Duke University.">
+    <meta name="author" content="DBSnet Team: Justin Zhang">
+	<title>DBSnet | Login</title>
+	<style>
+		body {
+			font: 100% arial, helvetica, sans-serif;
+			background: white;
+
+		}
+
+		h1{
+			font: bold 20px;
+			width: 1200px;
+			color: white;
+			letter-spacing: 0.2em;
+			background: linear-gradient(right, white, #038);
+			background: -webkit-linear-gradient(right, white, #038);
+		}
+
+		#login {
+			position: absolute;
+			left: 750px;
+			top: 100px;
+			padding: 20px;
+			border: 2px #000080 solid;
+			border-radius: 15px;
+			width: 290px;
+			height: 190px;
+			display: block;
+		}
+
+		#signup {
+			position: absolute;
+			left: 750px;
+			top: 350px;
+			padding: 20px;
+			border: 2px #000080 solid;
+			border-radius: 15px;
+			width: 290px;
+			height: 190px;
+			display: block;
+		}
+
+		.form-password {
+        	position: relative;
+        	left: 33px;
+		}
+
+		.signup_code {
+			position: relative;
+			left: 5px;
+		}
+
+		.form-signin-heading, .form-signup-heading {
+			border-bottom: 1px black solid;
+			font-size: 100%;
+			font-weight: bold;
+		}
+
+		.checkbox {
+			position: relative;
+			top: 10px;
+		}
+
+		#What-is-this {
+			letter-spacing: 0.1em;
+			word-spacing: 0.1em;
+			position: absolute;
+			left: 140px;
+			top: 130px;
+			width: 500px;
+		}
+
+		#illustration {
+			padding: 20px;
+			letter-spacing: 0.1em;
+			word-spacing: 0.1em;
+			width: 1050px;
+			position: absolute;
+			left: 120px;
+			top: 180px;
+			text-shadow: 1px 1px 1px #999;
+			width: 500px;
+		}
+
+		input[type=email]:valid { background: #FFF }
+		input[type=email]:invalid { background: #F33 }
+
+		.btn-signup {
+			position: relative;
+			left: 100px;
+			top: 25px;
+			border-radius: 20px;
+			background-color: #038;
+			color: white;
+			text-align: center;
+			padding: 10px;
+		}
+
+		.btn-login {
+			position: relative;
+			left: 100px;
+			top: -20px;
+			border-radius: 20px;
+			background-color: #038;
+			color: white;
+			text-align: center;
+			padding: 10px;
+		}
+
+		.policy-check {
+			position: relative;
+			top: 10px;
+		}
+
+		#forgot a {
+			color: hsl(250,50%,50%);
+		}
+
+		#forgot a:hover {
+			color: hsl(250,100%,80%);
+		}
+
+		.policy-check a {
+			color: hsl(250,50%,50%);
+		}
+
+		.policy-check a:hover {
+			color: hsl(250,100%,80%);
+		}
+
+		.pic-networking {
+			position: absolute;
+			left: 270px;
+			top: 350px;
+		}
+
+	</style>
+
+</head>
+
+<body>
+<div class="container">
+
+	<h1>Duke Business Society Alumni Network</h1>
+
+	<h2 id="What-is-this">DBSnet makes it easy to build strong professional network.</h2>
+	
+	<p id="illustration">DBSnet helps connect the most talented, driven and business-minded Duke students and alumni together. Within this database, you may find personal information, such as contact details, of DBS members and alumni. You may also discuss ideas with each other on the forum. <em>Sign up today if you haven't done so yet!</em></p>
+
+    <form action="" method="POST" name="login" id="login">
+        <h2 class="form-signin-heading">Registered DBS Member or Alumni</h2>
+        <label for"form-username">Email Address: </label>
+        <input type="text" class="form-username" name="form-username" required autofocus>
+        <label for="form-password">Password: </label>
+        <input type="password" class="form-password" required>
+        <label class="checkbox">
+          <br><input type="checkbox" value="remember-me">Remember me
+        </label>
+        <p id="forgot"><a href="">Forgot your password?</a></p>
+        <br><button class="btn-login" type="submit">Login in</button>
+    </form>
+
+    <form action="" method="POST" name="signup" id="signup">
+    	<h2 class="form-signup-heading">Not Yet Registered?</h2>
+    	<label for="email_address">Email Address: </label>
+    	<input type="email" class="email_address" name="email_address">
+    	<br><label for="signup_code">Sign-up Code: </label>
+    	<input type="text" class="signup_code" name="signup_code">
+    	<label class="policy-check">
+    		<br><input type="checkbox" value="agree-policy">By click here, I agree to DBSnet's <a href="">User Agreement and Privacy Policy</a>
+    	</label>
+    	<br><button class="btn-signup" type="submit">Sign up</button>
+    </form>
+
+    <p class="pic-networking"><img src="http://1d8a787de4174f1aa625-28a4b9047a732d2a8879bfd4a1538bd8.r56.cf3.rackcdn.com/I_3247_copy.jpg" alt="Networking"></p>
+
+</div>
+</body>
+</html>

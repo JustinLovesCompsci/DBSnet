@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Profile page for DBS members and alumni">
+    <meta name="author" content="DBSnet Team: Justin Zhang">
+
+    <link href="bootstrap.css" rel="stylesheet">
+
+    <title>DBSnet | Profile</title>
+
+    <style>
+    
+        body {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            /*background: linear-gradient(right, white, #06B);
+            background: -webkit-linear-gradient(right, white, #06B);*/
+            /*color: #036;*/
+        }
+
+        #what-is-this {
+            font-size: 20px;
+        }
+
+        fieldset {
+            padding: 0px;
+            margin-top: 10px;
+            font-size: 15px;
+        }        
+
+        #professional {
+            text-decoration: underline;
+            font-size: 30px;
+            font-weight: bold;
+            margin: 30px 0;
+            position: relative;
+            top: 20px;
+        }
+
+        #text-about {
+            text-decoration: underline;
+        }
+
+        #first-name, #last-name, #email-address, #password, #country, #industry-interest, #linkedin-web, #phone-number, .company-name, .industry, .location, .title{
+            border-radius: 10px;
+            height: 35px;
+            width: 180px;
+            text-indent: 5px;
+            font-size: 15px;
+        }
+
+        #password, #email-address, #phone-number, .company-name, .title {
+            width: 250px;
+        }
+
+        #industry-interest {
+            width: 600px;
+        }
+
+
+
+        #btn-update {
+            position: relative;
+            left: 400px;
+            top: -10px;
+            border-radius: 20px;
+            background-color: #03A;
+            color: white;
+            text-align: center;
+            width: 150px;
+            padding: 10px;
+        }
+
+        /*.container {
+            width: 800px;
+            position: relative;
+            left: 30px;
+            background: white;
+            border: solid #038;
+            border-width: 0 5px;
+            margin: auto;
+        }*/
+
+        #contact, #academic, #job, #internship1, #internship2, #internship3 {
+            font-weight: bold;
+            font-size: 20px;
+            text-decoration: underline;
+        }
+
+        .date-label {
+            /*color: #036;*/
+            font-size: 15px;
+        }
+
+        .navbar {
+            margin-bottom: 20px;
+        }
+
+        .signout {
+            background-color: #06B;
+        }
+
+        .nav.navbar-nav.navbar-right a{
+            color: white;
+        }
+
+        #grad-year, .major-bachelor, .major, #minor, #certificate {
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="container">
+          <!-- Static navbar -->
+      <div class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">DBSnet</a>
+        </div>
+
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="homepage.html">Homepage</a></li>
+            <li class="active"><a href="profile.html">Profile</a></li>
+            <li><a href="table.html">Table</a></li>
+            <li><a href="forum.html">Forum</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="signout"><a href="login.html">Sign Out</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+
+<div class="jumbotron">
+	<h1>Personal Information</h1>
+
+	<h2 id="what-is-this">Please fill in the blanks <em id="text-about">as accurate as possible</em>. This profile page is intended for other DBS members and alumni to know better about you.</h2>
+
+	<form action="" method="POST" name="profile" id="profile"> 
+        <input type="text" name="first-name" placeholder="First Name" id="first-name" required autofocus>
+        <input type="text" name="last-name" placeholder="Last Name" id="last-name" required>
+        <input type="password" name="password" placeholder="Password (6 or more characters)" id="password" required>
+
+    <fieldset>
+        <legend id="contact">Contact Details</legend>
+        <input type="email" id="email-address" name="email-address" placeholder="Email Address" required>
+        <input type"tel" id="phone-number" name="phone-number" placeholder="Phone Number (Optional)">
+    </fieldset>
+
+    <fieldset>
+        <legend id="academic">Academic Background</legend>
+         <select name="grad-year" id="grad-year" required>
+                <option value="" disabled selected>Graduation Year</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option>
+                <option value="2014">2014</option>
+                <option value="2013">2013</option>
+                <option value="2012">2012</option>
+                <option value="2011">2011</option>
+                <option value="2010">2010</option>
+                <option value="2009">2009</option>
+                <option value="2008">2008</option>
+                <option value="2007">2007</option>
+                <option value="2006">2006</option>
+                <option value="2005">2005</option>
+                <option value="2004">2004</option>
+                <option value="2003">2003</option>
+                <option value="2002">2002</option>
+                <option value="2001">2001</option>
+                <option value="2000">2000</option>
+                <option value="1999">1999</option>
+                <option value="1998">1998</option>
+                <option value="1997">1997</option>
+                <option value="1996">1996</option>
+                <option value="1995">1995</option>
+                <option value="1994">1994</option>
+                <option value="1993">1993</option>
+                <option value="1992">1992</option>
+                <option value="1991">1991</option>
+                <option value="1990">1990</option>
+                <option value="1989">1989</option>
+                <option value="1988">1988</option>
+                <option value="1987">1987</option>                           
+        </select>
+
+        <br><select name="mj-B" class="major-bachelor" required>
+            <option value="BS">B.S.</option>
+            <option value="BA">B.A.</option>
+        </select>
+
+        <select name="mj" class="major" required>
+            <option value="" disabled selected>Major I</option>
+            <option value="" disabled><--Trinity College of Arts & Sciences---></option>
+            <option value="">African & African American Studies</option>
+            <option value="">Art History</option>
+            <option value="">Asian & Middle Eastern Studies</option>
+            <option value="">Biology</option>
+            <option value="">Biophysics</option>
+            <option value="">Canadian Studies</option>
+            <option value="">Chemistry</option>
+            <option value="">Classical Languages</option>
+            <option value="">Classical Civilization</option>
+            <option value="">Computer Science</option>
+            <option value="">Culural Anthropology</option>
+            <option value="">Dance</option>
+            <option value="">Earth & Ocean Studies</option>
+            <option value="">Economics</option>
+            <option value="">English</option>
+            <option value="">Environmental Sciences</option>
+            <option value="">Environental Sciences/Policy</option>
+            <option value="">Evolutionary Anthropology</option>
+            <option value="">French & Francophone Studies</option>
+            <option value="">German</option>
+            <option value="">Global Health</option>
+            <option value="">History</option>
+            <option value="">Interdepartmental Major</option>
+            <option value="">International Comparative Studies</option>
+            <option value="">Italian Studies</option>
+            <option value="">Linguistics</option>
+            <option value="">Global Cultural Studies</option>
+            <option value="">Mathematics</option>
+            <option value="">Medieval & Renaissance Studies</option>
+            <option value="">Music</option>
+            <option value="">Neuroscience</option>
+            <option value="">Philosophy</option>
+            <option value="">Physics</option>
+            <option value="">Political Science</option>
+            <option value="">Program II</option>
+            <option value="">Psychology</option>
+            <option value="">Public Policy Studies</option>
+            <option value="">Religion</option>
+            <option value="">Romance Studies</option>
+            <option value="">Russian</option>
+            <option value="">Slavic & Eurasian Studies</option>
+            <option value="">Sociology</option>
+            <option value="">Spanish, Latin American Studies</option>
+            <option value="">Statistical Science</option>
+            <option value="">Theater Studies</option>
+            <option value="">Visual & Media Studies</option>
+            <option value="">Visual Arts</option>
+            <option value="">Women's Studies</option>
+            <option value="" disabled><---Pratt School of Engineering----></option>
+            <option value="">Biomedical Engineering</option>
+            <option value="">Civil Engineering</option>
+            <option value="">Environmental Engineering</option>
+            <option value="">Electrical & Computer Engineering</option>
+            <option value="">Mechanical Engineering</option>
+        </select>
+
+        <br><select name="mj-B2" class="major-bachelor">
+            <option value="BS">B.S.</option>
+            <option value="BA">B.A.</option>
+        </select>
+
+        <select name="mj2" class="major">
+            <option value="" disabled selected>Major II (if applicable)</option>
+            <option value="" disabled><--Trinity College of Arts & Sciences---></option>
+            <option value="">African & African American Studies</option>
+            <option value="">Art History</option>
+            <option value="">Asian & Middle Eastern Studies</option>
+            <option value="">Biology</option>
+            <option value="">Biophysics</option>
+            <option value="">Canadian Studies</option>
+            <option value="">Chemistry</option>
+            <option value="">Classical Languages</option>
+            <option value="">Classical Civilization</option>
+            <option value="">Computer Science</option>
+            <option value="">Culural Anthropology</option>
+            <option value="">Dance</option>
+            <option value="">Earth & Ocean Studies</option>
+            <option value="">Economics</option>
+            <option value="">English</option>
+            <option value="">Environmental Sciences</option>
+            <option value="">Environental Sciences/Policy</option>
+            <option value="">Evolutionary Anthropology</option>
+            <option value="">French & Francophone Studies</option>
+            <option value="">German</option>
+            <option value="">Global Health</option>
+            <option value="">History</option>
+            <option value="">Interdepartmental Major</option>
+            <option value="">International Comparative Studies</option>
+            <option value="">Italian Studies</option>
+            <option value="">Linguistics</option>
+            <option value="">Global Cultural Studies</option>
+            <option value="">Mathematics</option>
+            <option value="">Medieval & Renaissance Studies</option>
+            <option value="">Music</option>
+            <option value="">Neuroscience</option>
+            <option value="">Philosophy</option>
+            <option value="">Physics</option>
+            <option value="">Political Science</option>
+            <option value="">Program II</option>
+            <option value="">Psychology</option>
+            <option value="">Public Policy Studies</option>
+            <option value="">Religion</option>
+            <option value="">Romance Studies</option>
+            <option value="">Russian</option>
+            <option value="">Slavic & Eurasian Studies</option>
+            <option value="">Sociology</option>
+            <option value="">Spanish, Latin American Studies</option>
+            <option value="">Statistical Science</option>
+            <option value="">Theater Studies</option>
+            <option value="">Visual & Media Studies</option>
+            <option value="">Visual Arts</option>
+            <option value="">Women's Studies</option>
+            <option value="" disabled><---Pratt School of Engineering----></option>
+            <option value="">Biomedical Engineering</option>
+            <option value="">Civil Engineering</option>
+            <option value="">Environmental Engineering</option>
+            <option value="">Electrical & Computer Engineering</option>
+            <option value="">Mechanical Engineering</option>
+        </select>
+
+        <br><select name="mn" id="minor">
+            <option value="" disabled selected>Minor (if applicable)</option>
+            <option value="" disabled><--Trinity College of Arts & Sciences---></option>
+            <option value="">African & African American Studies</option>
+            <option value="">Art History</option>
+            <option value="">Asian & Middle Eastern Studies</option>
+            <option value="">Biology</option>
+            <option value="">Canadian Studies</option>
+            <option value="">Chemistry</option>
+            <option value="">Classical Civilizatio</option>
+            <option value="">Classical Archaeology</option>
+            <option value="">Computational Biology & Bioinformatics</option>
+            <option value="">Computer Science</option>
+            <option value="">Culural Anthropology</option>
+            <option value="">Dance</option>
+            <option value="">Earth & Ocean Studies</option>
+            <option value="">Economics</option>
+            <option value="">Education</option>
+            <option value="">English</option>
+            <option value="">Creative Writing</option>
+            <option value="">Environental Sciences/Policy</option>
+            <option value="">Evolutionary Anthropology</option>
+            <option value="">Finance</option>
+            <option value="">French Studies</option>
+            <option value="">German</option>
+            <option value="">Global Health</option>
+            <option value="">Greek</option>
+            <option value="">History</option>
+            <option value="">Italian Studies</option>
+            <option value="">Latin</option>
+            <option value="">Linguistics</option>
+            <option value="">Global Cultural Studies</option>
+            <option value="">Mathematics</option>
+            <option value="">Medieval & Renaissance Studies</option>
+            <option value="">Music</option>
+            <option value="">Neuroscience</option>
+            <option value="">Philosophy</option>
+            <option value="">Physics</option>
+            <option value="">Political Science</option>
+            <option value="">Psychology</option>
+            <option value="">Religion</option>
+            <option value="">Russian Literature in Translation</option>
+            <option value="">Russian Culture & Language</option>
+            <option value="">Turkish Culture & Language</option>
+            <option value="">Polish Culture & Language</option>
+            <option value="">Sociology</option>
+            <option value="">Spanish</option>
+            <option value="">Statistical Science</option>
+            <option value="">Theater Studies</option>
+            <option value="">Visual Arts</option>
+            <option value="">Photography</option>
+            <option value="">Visual & Media Studies</option>
+            <option value="">Women's Studies</option>
+            <option value="" disabled><---Pratt School of Engineering----></option>
+            <option value="">Electrical & Computer Engineering</option>
+            <option value="">Energy Engineering</option>
+        </select>
+
+        <select name="ctf" id="certificate">
+            <option value="" selected disabled>Certificate Program (if applicable)</option>
+            <option value="" disabled><--Trinity College of Arts & Sciences---></option>
+            <option value="">Arts of the Moving Image</option>
+            <option value="">Child Policy Research Certificate</option>
+            <option value="">Documentary Studies</option>
+            <option value="">Early Childhood Education Studies</option>
+            <option value="">East Asian Studies</option>
+            <option value="">Energy and the Environment</option>
+            <option value="">Genome Sciences & Policy</option>
+            <option value="">Human Development</option>
+            <option value="">Information Science & Information Studies</option>
+            <option value="">Islamic Studies</option>
+            <option value="">Jewish Studies</option>
+            <option value="">Latin American Studies</option>
+            <option value="">Latino/a Studies in the Global South</option>
+            <option value="">Marine Science and Conservation Leadership</option>
+            <option value="">Markets & Management</option>
+            <option value="">Marxism & Society</option>
+            <option value="">Philosophy, Politics & Economics</option>
+            <option value="">Policy Journalism & Media Studies</option>
+            <option value="">South Asian Studies</option>
+            <option value="">Study of Ethics</option>
+            <option value="" disabled><---Pratt School of Engineering----></option>
+            <option value="">Aerospace Engineering</option>
+            <option value="">Energy and the Environment</option>
+            <option value="">Architectual Engineering</option>
+        </select>
+    </fieldset>
+
+        <h2 id="professional">Professional Background</h2>
+        <input type="text" name="industry-interest" placeholder="Areas of Professional Expertise/Industry Interests (e.g. Investment Banking)" id="industry-interest" required>
+
+        <fieldset>
+            <legend id="job">Current Job (Alumni Only)</legend>
+            <input type="text" name="job-company" placeholder="Company Name" class="company-name">
+            <input type="text" name="job-industry" placeholder="Industry" class="industry">
+            <input type="text" name="job-location" list="city-name" placeholder="City Name" class="location">
+                <datalist id="city-name">
+                    <option value="Boston">
+                    <option value="New York City">
+                    <option value="Atlanta">
+                    <option value="Washington D.C.">
+                    <option value="Durham">
+                    <option value="Chapel-Hill">
+                    <option value="Raleigh">
+                    <option value="San Francisco">
+                    <option value="London">
+                    <option value="Los Angeles">
+                </datalist>
+            <br><input type="text" name="job-title" placeholder="Title" class="title">
+            <br><label class="date-label" for="date">Time Period: </label>
+            <input type="month" name="job-date-start" class="date">
+            <label fclass="date-label" or="date"> to </label>
+            <input type="month" name="job-date-end" class="date">
+        </fieldset>
+
+        <fieldset>
+            <legend id="internship1">Internship I</legend>
+            <input type="text" name="intern-company1" placeholder="Company Name" class="company-name">
+            <input type="text" name="intern-industry1" placeholder="Industry" class="industry">
+            <input type="text" name="internship-location1" list="city-name" placeholder="City Name" class="location">
+            <br><input type="text" name="intern-title1" placeholder="Title" class="title">
+            <br><label class="date-label" for="date">Time Period: </label>
+            <input type="month" name="intern-date-start1" class="date">
+            <label class="date-label" for="date"> to </label>
+            <input type="month" name="intern-date-end1" class="date">
+        </fieldset>
+
+        <fieldset>
+            <legend id="internship2">Internship II (if applicable)</legend>
+            <input type="text" name="intern-company2" placeholder="Company Name" class="company-name">
+            <input type="text" name="intern-industry2" placeholder="Industry" class="industry">
+            <input type="text" name="internship-location2" list="city-name" placeholder="City Name" class="location">
+            <br><input type="text" name="intern-title2" placeholder="Title" class="title">
+            <br><label class="date-label" for="date">Time Period: </label>
+            <input type="month" name="intern-date-start2" class="date">
+            <label class="date-label" for="date"> to </label>
+            <input type="month" name="intern-date-end2" class="date">
+        </fieldset>
+
+        <fieldset>
+            <legend id="internship3">Internship III (if applicable)</legend>
+            <input type="text" name="intern-company3" placeholder="Company Name" class="company-name">
+            <input type="text" name="intern-industry3" placeholder="Industry" class="industry">
+            <input type="text" name="internship-location3" list="city-name" placeholder="City Name" class="location">
+            <br><input type="text" name="intern-title3" placeholder="Title" class="title">
+            <br><label class="date-label" for="date">Time Period: </label>
+            <input type="month" name="intern-date-start3" class="date">
+            <label class="date-label" for="date"> to </label>
+            <input type="month" name="intern-date-end3" class="date">
+        </fieldset>
+
+    <br><button id="btn-update" type="submit">Update</button>
+    </form>
+</div>
+</div>
+</body>
+</html>
